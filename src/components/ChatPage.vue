@@ -3,9 +3,8 @@
     <div class="message-list">
       <div v-for="(message, index) in messages" :key="index" class="message"
         :class="{ 'user': message.role === 'user', 'assistant': message.role === 'assistant' }">
-        <img :src="message.role === 'user' ? '/assets/user-avatar.svg' : '/assets/assistant-avatar.svg'" 
-             class="avatar" 
-             :class="{ 'avatar-right': message.role === 'user', 'avatar-left': message.role === 'assistant' }"/>
+        <img :src="message.role === 'user' ? '/assets/user-avatar.svg' : '/assets/assistant-avatar.svg'" class="avatar"
+          :class="{ 'avatar-right': message.role === 'user', 'avatar-left': message.role === 'assistant' }" />
         <div class="content" v-html="parseMarkdown(message.content)"></div>
       </div>
     </div>
@@ -36,7 +35,7 @@ const displayContents = ref({});
 function typeWriterEffect(messageId, content) {
   let index = 0;
   displayContents.value[messageId] = '';
-  
+
   const timer = setInterval(() => {
     if (index < content.length) {
       displayContents.value[messageId] = content.substring(0, index + 1);
@@ -127,7 +126,7 @@ const parseMarkdown = (content) => {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .avatar-right {
@@ -154,12 +153,19 @@ const parseMarkdown = (content) => {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
 
 @keyframes fadeIn {
-  to { opacity: 1 }
+  to {
+    opacity: 1
+  }
 }
 
 .message.user {
@@ -215,7 +221,9 @@ button:disabled {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 button:disabled svg {
@@ -240,10 +248,9 @@ button:disabled svg {
     width: 90vw;
     height: 70vh;
   }
-  
+
   .input-area {
     width: 90vw;
   }
 }
 </style>
-
