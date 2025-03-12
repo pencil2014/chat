@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 头部 -->
+  <circle cx="12" cy="8" r="5" fill="#2196F3"/>
+  
+  <!-- 躯干 -->
+  <rect x="7" y="13" width="10" height="8" rx="2" fill="#2196F3"/>
+  
+  <!-- 天线 -->
+  <path d="M12 4V6M9 3L10 5M15 3L14 5" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- 屏幕显示 -->
+  <rect x="9" y="14" width="6" height="3" rx="1" fill="white"/>
+  <path d="M10 17.5L12 19L14 17.5" stroke="white" stroke-width="1.5"/>
+</svg>
